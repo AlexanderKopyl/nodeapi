@@ -1,0 +1,36 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "Core api zoo",
+  "main": "api/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderKopyl/nodeapi.git"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Oleksandr Kopyl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderKopyl/nodeapi/issues"
+  },
+  "homepage": "https://github.com/AlexanderKopyl/nodeapi#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "^8.2.0",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1",
+    "nodemon": "^2.0.2"
+  }
+}
