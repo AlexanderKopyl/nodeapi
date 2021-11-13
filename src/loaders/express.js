@@ -2,6 +2,9 @@ let bodyParser = require('body-parser');
 let cors = require('cors');
 let {api} = require('../config');
 let routes = require('../api/route');
+let swaggerUI = require('swagger-ui-express')
+let {swagger} = require('../api/openapi');
+
 module.exports = async ({app}) => {
 
     app.get('/status', (req, res) => { res.status(200).end(); });
@@ -13,6 +16,9 @@ module.exports = async ({app}) => {
 
     app.use(api.prefix, routes);
     // ...More middlewares
+
+    //Swagger routes
+    app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swagger))
 
     /// catch 404 and forward to error handler
     app.use((req, res, next) => {
